@@ -170,10 +170,10 @@ on:
           - KN-VIVA
       
       language_select:
-        description: "WebUI 語言設定 (Custom Language Selector)"
+        description: "WebUI 语言设定 (Custom Language Selector)"
         required: true
         type: choice
-        default: 'CN'
+        default: 'CN (繁體中文)'
         options:
           - English_Only
           - CN (繁體中文)
