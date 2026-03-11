@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       target_select:
-        description: "選擇機型 (Target Model)"
+        description: "选择机型 (Target Model)"
         required: true
         default: 'TL_C2-V1'
         type: choice
@@ -173,7 +173,7 @@ on:
         description: "WebUI 語言設定 (Custom Language Selector)"
         required: true
         type: choice
-        default: 'English_Only'
+        default: 'CN'
         options:
           - English_Only
           - CN (繁體中文)
@@ -276,7 +276,7 @@ jobs:
         run: |
           echo "::group::Git Clone"
           git config --global --add safe.directory '*'
-          git clone -b "$PADAVAN_BRANCH" "$PADAVAN_REPO"
+          git clone -b "$PADAVAN_BRANCH" "$PADAVAN_REPO" padavan-ng
           if [ "$PADAVAN_COMMIT" != "HEAD" ] && [ ! -z "$PADAVAN_COMMIT" ]; then
             git -C padavan-ng checkout "$PADAVAN_COMMIT"
           fi
